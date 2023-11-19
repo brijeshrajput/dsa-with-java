@@ -13,5 +13,7 @@ class DecToBinary {
             i++;
             n = n/2;
         }
+
+        System.out.print(bin);
     }
 }
