@@ -9,7 +9,7 @@ class DecToBinary {
         int i = 0;
         while(n>0) {
             int rem = n%2;
-            bin = bin + (int)(rem * Math.pow(2, i));
+            bin = bin + (int)(rem * Math.pow(10, i));
             i++;
             n = n/2;
         }
