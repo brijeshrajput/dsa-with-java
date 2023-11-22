@@ -1,0 +1,1 @@
+int p = bp - arr[i];
