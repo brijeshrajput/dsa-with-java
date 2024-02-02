@@ -53,6 +53,16 @@ public class IthBit {
         print(num);
     }
 
+    public static void clearRangeBits(int n, int i, int j) {
+        int a = ~(0) << (j+1);
+        int b = (1<<i) - 1;
+        int bitMask = a | b;
+
+        int num = n & bitMask;
+
+        print(num);
+    }
+
     public static void main(String args[]) {
         // getBit(10, 2); //0
         // getBit(10, 3); //1
@@ -61,6 +71,8 @@ public class IthBit {
 
         // clearBit(10, 1); //8
 
-        clearLastBits(15, 2); //12
+        //clearLastBits(15, 2); //12
+
+        clearRangeBits(10, 2, 4); //2
     }
 }
