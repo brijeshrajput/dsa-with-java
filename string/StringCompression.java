@@ -8,11 +8,19 @@ public class StringCompression {
  
         StringBuilder sb = new StringBuilder();
 
-        sb.append(s.charAt(0));
-        for (int i = 1; i < n; i++){
+        for (int i = 0; i < n; i++){
+            int c = 1;
             while (i < n-1 && s.charAt(i) == s.charAt(i+1)) {
-                
+                c++;
+                i++;
             }
+
+            sb.append(s.charAt(i));
+
+            if (c > 0){
+                sb.append(c);
+            }
+
         }
         
         return sb.toString();
